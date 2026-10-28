@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Le Gaulois – L'escalope Cordon Bleu Dinde</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;1,800&amp;family=Montserrat:wght@400;600;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:linear-gradient(180deg,#FFF4DC,#FFE2B8);color:#2B1D14;font-family:'Montserrat',system-ui,sans-serif;line-height:1.65}
+a{color:#1B4B9B}a:hover{color:#C8102E}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.sec{padding:96px 0}
+.d{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.02em;line-height:1;margin:0}
+h2.d{font-size:clamp(40px,5.5vw,64px)!important}
+h3.d{font-size:30px!important}
+span.d{font-size:34px!important}
+.eyebrow{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin:0 0 14px;padding:6px 14px;border-radius:999px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.card{border-radius:24px;padding:28px;transition:transform .45s cubic-bezier(.34,1.8,.5,1),box-shadow .3s}
+.card:hover{transform:translateY(-10px) rotate(-.8deg);box-shadow:0 18px 0 rgba(0,0,0,.12)}
+.btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:800;text-decoration:none;box-shadow:0 5px 0 rgba(0,0,0,.28);transition:transform .4s cubic-bezier(.34,1.9,.5,1),box-shadow .3s;animation:btnpulse 3.4s ease-in-out infinite}
+.btn:hover{transform:translateY(-6px) scale(1.09) rotate(-2deg);box-shadow:0 12px 0 rgba(0,0,0,.28);animation:none}
+.btn:active{transform:translateY(4px) scale(.93);box-shadow:0 1px 0 rgba(0,0,0,.28);transition-duration:.1s;animation:none}
+@keyframes btnpulse{0%,84%,100%{transform:scale(1)}88%{transform:scale(1.08)}92%{transform:scale(.97)}96%{transform:scale(1.03)}}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;align-items:center}
+.pill{padding:10px 20px;border-radius:999px;font-weight:800;font-size:15px;white-space:nowrap;transition:transform .4s cubic-bezier(.34,1.9,.5,1)}
+.pill:hover{transform:translateY(-5px) rotate(-3deg) scale(1.12)}
+.logo{transition:transform .45s cubic-bezier(.34,1.9,.5,1)}
+.logo:hover{transform:rotate(-4deg) scale(1.1)}
+td,th{padding:12px 8px;text-align:left;border-bottom:2px solid rgba(43,29,20,.12)}
+.ns{display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff}
+@media (max-width:640px){.sec{padding:60px 0}.nav-links{display:none}}
+.melt{position:relative;display:inline-block;width:100%;max-width:440px;border-radius:28px;border:6px solid #fff;box-shadow:14px 14px 0 #FFD54A;overflow:hidden;line-height:0;transition:transform .5s cubic-bezier(.34,1.8,.5,1)}
+.melt:hover{transform:rotate(1.5deg) scale(1.03)}
+.melt img{width:100%;display:block}
+.melt svg{position:absolute;left:0;top:0;width:100%;height:100%}
+.dr{transform-box:fill-box;transform-origin:top center;animation:drip 6s cubic-bezier(.45,.05,.4,1) infinite both}
+.dp{transform-box:fill-box;transform-origin:center;animation:fall 6s ease-in infinite both}
+@keyframes drip{0%{transform:scaleY(.05);opacity:0}8%{opacity:1}58%{transform:scaleY(1)}72%{transform:scaleY(.93)}88%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
+@keyframes fall{0%,56%{transform:translateY(0) scale(.4);opacity:0}60%{transform:translateY(0) scale(1);opacity:1}84%{transform:translateY(75px) scale(1);opacity:1}92%,100%{transform:translateY(80px) scale(.6);opacity:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.dr{opacity:1}}
+</style>
+</helmet>
+
+<div style="background:#FFF4DC">
+
+<header style="background:linear-gradient(90deg,#C8102E,#E8452C 60%,#F5A623);color:#fff;border-bottom:6px solid #FFD54A">
+<div class="wrap" style="display:flex;align-items:center;justify-content:space-between;height:68px">
+<a href="#" aria-label="Le Gaulois"><img class="logo" src="./assets/2655cb557b58026e876856b88d121f89.png" alt="Le Gaulois" style="height:52px;width:auto;display:block"></a>
+<nav class="nav-links" style="display:flex;gap:28px;font-weight:800;font-size:15px">
+<a href="#histoire" style="color:#fff;text-decoration:none">Notre histoire</a>
+<a href="#produit" style="color:#fff;text-decoration:none">Le produit</a>
+<a href="#nutrition" style="color:#fff;text-decoration:none">Nutrition</a>
+<a href="#preparation" style="color:#fff;text-decoration:none">Préparation</a>
+</nav>
+</div>
+</header>
+
+<section style="background:linear-gradient(135deg,#12347A 0%,#1B4B9B 45%,#C8102E 100%);color:#fff">
+<div class="wrap" style="padding-top:72px;padding-bottom:88px">
+<div class="two">
+<div>
+<p class="eyebrow" style="background:#FFD54A;color:#2B1D14">Volaille 100 % française</p>
+<h1 class="d" style="font-size:clamp(60px,10vw,128px);color:#fff"><span style="font-size:.5em!important;letter-spacing:.08em">L'escalope</span><br>Cordon Bleu<br><span style="color:#FFD54A;font-style:italic;font-size:1em!important">Dinde</span></h1>
+<p style="font-size: 20px; font-weight: 600; max-width: 470px; margin: 24px 0 32px; color: #ffffff">Une escalope de dinde dorée et croustillante, qui cache un cœur de jambon et de fromage fondant. Le plaisir d'un classique, prêt en quelques minutes.</p>
+<div style="display:flex;gap:16px;flex-wrap:wrap">
+<a class="btn" href="#preparation" style="background:linear-gradient(90deg,#FFD54A,#F5A623);color:#2B1D14">Voir la préparation</a>
+<a class="btn" href="#histoire" style="background:#fff;color:#1B4B9B">Notre histoire</a>
+</div>
+</div>
+<div style="text-align:center">
+<div class="melt"><img src="./assets/d92875612e224514d60276cc1440fe45.png" alt="Boîte de L'escalope Cordon Bleu Dinde Le Gaulois"></div>
+</div>
+</div>
+</div>
+</section>
+
+<section style="background:linear-gradient(90deg,#12347A,#1B4B9B 50%,#12347A)">
+<div class="wrap" style="padding-top:24px;padding-bottom:24px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+<span class="pill" style="background:#FFD54A;color:#2B1D14">Viande 100 % filet*</span>
+<span class="pill" style="background:#C8102E;color:#fff">Sans colorant</span>
+<span class="pill" style="background:#8CC63F;color:#2B1D14">Sans arôme artificiel</span>
+<span class="pill" style="background:#fff;color:#1B4B9B">Nutri-Score B</span>
+<span class="pill" style="background:#F4B6C2;color:#2B1D14">Origin'Info : France</span>
+</div>
+</section>
+
+<section id="histoire" class="sec">
+<div class="wrap">
+<div style="max-width:700px;margin-bottom:48px">
+<p class="eyebrow" style="background:#C8102E;color:#fff">Notre histoire</p>
+<h2 class="d" style="font-size:clamp(32px,4.5vw,54px)">Née, élevée et préparée en France</h2>
+<p style="font-size:18px;margin-top:20px">Le cordon bleu, c'est une fine escalope roulée autour de jambon et de fromage, panée puis dorée. Le Gaulois l'amène sur la table de tous les jours, avec une origine inscrite noir sur blanc sur la boîte.</p>
+</div>
+<div class="grid">
+<div class="card" style="background:linear-gradient(135deg,#C8102E,#E8452C);color:#fff"><p class="d" style="font-size:48px;color:#FFD54A">01</p><h3 class="d" style="font-size:26px;margin:8px 0">Née</h3><p style="margin:0">La dinde naît en France. Le label « Volaille 100 % française » en est la garantie.</p></div>
+<div class="card" style="background:linear-gradient(135deg,#12347A,#2D63C4);color:#fff"><p class="d" style="font-size:48px;color:#FFD54A">02</p><h3 class="d" style="font-size:26px;margin:8px 0">Élevée</h3><p style="margin:0">Elle grandit en France. La viande employée est 100 % filet, la partie la plus tendre.</p></div>
+<div class="card" style="background:linear-gradient(135deg,#8CC63F,#C9E57F)"><p class="d" style="font-size:48px;color:#C8102E">03</p><h3 class="d" style="font-size:26px;margin:8px 0">Préparée</h3><p style="margin:0">Elle est préparée en France : jambon, fromage et une panure bien croustillante.</p></div>
+</div>
+<p style="margin-top:32px;font-size:16px;color:#5A4636;max-width:700px">[À compléter : histoire de la marque Le Gaulois, date de création, éleveurs, régions.]</p>
+</div>
+</section>
+
+<section id="produit" class="sec" style="background:linear-gradient(160deg,#FFE58A,#FFD54A 45%,#F5A623)">
+<div class="wrap">
+<div class="two" style="align-items:start">
+<div>
+<p class="eyebrow" style="background:#1B4B9B;color:#fff">Le produit</p>
+<h2 class="d" style="font-size:clamp(30px,4vw,46px)">Ce qu'il y a dans chaque escalope</h2>
+<p style="font-size:18px;margin-top:20px">Chaque boîte contient 2 escalopes. Sous la panure orangée, on trouve de la dinde bien blanche, du jambon rose et un fromage qui fond à la chaleur.</p>
+<ul style="padding-left:20px;font-size:17px;font-weight:600">
+<li>Viande de dinde 100 % filet*</li>
+<li>Cœur de jambon et de fromage</li>
+<li>Sans colorant, sans arôme artificiel</li>
+<li>2 escalopes par boîte, avec 1 Départ'aimant Sarlin' offert dans le paquet</li>
+</ul>
+<p style="font-size:14px;color:#5A4636">* Voir le détail sur l'emballage. Poids net : 200 g (2 × 100 g). Allergènes (indicatif) : blé (gluten), lait. [À compléter : liste complète des ingrédients, DLC.]</p>
+</div>
+<div>
+<div class="card" style="background:#fff">
+<h3 class="d" style="font-size:24px;margin:0 0 8px;color:#C8102E">Origin'Info</h3>
+<table style="width:100%;border-collapse:collapse;font-size:17px">
+<tr><th>Ingrédient</th><th>Origine</th></tr>
+<tr><td>Dinde</td><td>France</td></tr>
+<tr><td>Blé</td><td>France</td></tr>
+<tr><td>Lait</td><td>France</td></tr>
+</table>
+</div>
+<div class="card" style="margin-top:20px;background:#E8452C;color:#fff">
+<p class="d" style="font-size:28px;margin:0">1 € = 1 point</p>
+<p style="margin:6px 0 0;font-weight:600">Cumulez des points sur BoutiqueLeGaulois.fr.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="nutrition" class="sec" style="background:linear-gradient(160deg,#F1FAE3,#CBE8AA 60%,#A9D97C)">
+<div class="wrap">
+<div class="two" style="align-items:start">
+<div>
+<p class="eyebrow" style="background:#2E9B4A;color:#fff">Nutrition</p>
+<h2 class="d" style="font-size:clamp(30px,4vw,46px)">Nutri-Score B</h2>
+<p style="font-size:18px;margin:20px 0 28px">Sur l'échelle de A (meilleur) à E, ce produit est classé B.</p>
+<div style="display:inline-flex;background:#fff;border-radius:20px;padding:14px;gap:8px;align-items:center" role="img" aria-label="Nutri-Score : B sélectionné">
+<span class="ns" style="width:50px;height:50px;border-radius:12px;background:#2E7D32">A</span>
+<span class="ns" style="width:74px;height:74px;border-radius:50%;background:#7AC143;font-size:34px;box-shadow:0 0 0 4px #fff,0 0 0 7px #2B1D14;color:#2B1D14">B</span>
+<span class="ns" style="width:50px;height:50px;border-radius:12px;background:#FFD54A;color:#2B1D14">C</span>
+<span class="ns" style="width:50px;height:50px;border-radius:12px;background:#F5A623;color:#2B1D14">D</span>
+<span class="ns" style="width:50px;height:50px;border-radius:12px;background:#E8452C">E</span>
+</div>
+</div>
+<div class="card" style="background:#fff">
+<h3 class="d" style="font-size:22px;margin:0 0 8px">Valeurs nutritionnelles pour 100 g</h3>
+<table style="width:100%;border-collapse:collapse;font-size:17px">
+<tr><td>Énergie</td><td>≈ 968 kJ / 232 kcal</td></tr>
+<tr><td>Matières grasses</td><td>≈ 12 g</td></tr>
+<tr><td>dont acides gras saturés</td><td>≈ 3,3 g</td></tr>
+<tr><td>Glucides</td><td>≈ 15 g</td></tr>
+<tr><td>dont sucres</td><td>≈ 1,5 g</td></tr>
+<tr><td>Fibres</td><td>≈ 1,5 g</td></tr>
+<tr><td>Protéines</td><td>≈ 16 g</td></tr>
+<tr style="border:0"><td style="border:0">Sel</td><td style="border:0">≈ 1,1 g</td></tr>
+</table>
+<p style="font-size:14px;color:#5A4636;margin:12px 0 0">Valeurs indicatives, à vérifier avec le dos de l'emballage.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="preparation" class="sec" style="background:linear-gradient(160deg,#12347A,#1B4B9B 55%,#6A2C91);color:#fff">
+<div class="wrap">
+<div style="max-width:660px;margin-bottom:40px">
+<p class="eyebrow" style="background:#FFD54A;color:#2B1D14">Conseils de préparation</p>
+<h2 class="d" style="font-size:clamp(30px,4vw,50px)">De la boîte à l'assiette</h2>
+<p style="font-size:18px;margin-top:16px">Temps et températures indicatifs, à confirmer avec les indications au dos de la boîte.</p>
+</div>
+<div class="grid">
+<div class="card" style="background:linear-gradient(135deg,#FFD54A,#FFB347);color:#2B1D14"><h3 class="d" style="font-size:26px;margin:0 0 8px">Au four</h3><p style="margin:0">Préchauffez à 210 °C (th. 7). Posez les escalopes sur une plaque avec du papier cuisson, environ 12 min, en les retournant à mi-cuisson.</p></div>
+<div class="card" style="background:linear-gradient(135deg,#F4B6C2,#FFD1B8);color:#2B1D14"><h3 class="d" style="font-size:26px;margin:0 0 8px">À la poêle</h3><p style="margin:0">Un filet d'huile, feu moyen. Environ 5 min de chaque côté, jusqu'à une belle couleur dorée.</p></div>
+<div class="card" style="background:linear-gradient(135deg,#8CC63F,#C9E57F);color:#2B1D14"><h3 class="d" style="font-size:26px;margin:0 0 8px">À l'air fryer</h3><p style="margin:0">Préchauffez à 200 °C, cuisez environ 12 à 14 min en retournant une fois. Sans ajout de matière grasse.</p></div>
+</div>
+<div style="margin-top:32px;background:#C8102E;border-radius:20px;padding:20px 24px">
+<p style="margin:0;font-weight:800">Important</p>
+<p style="margin:4px 0 0">Vérifiez que la viande est cuite à cœur et que le fromage est bien chaud. Respectez la date limite et les conditions de conservation indiquées sur la boîte.</p>
+</div>
+</div>
+</section>
+
+<section class="sec" style="background:linear-gradient(180deg,#FFF4DC,#FFE2B8)">
+<div class="wrap">
+<div style="max-width:640px;margin-bottom:40px">
+<p class="eyebrow" style="background:#E8452C;color:#fff">Idées de repas</p>
+<h2 class="d" style="font-size:clamp(30px,4vw,46px)">Avec quoi l'accompagner ?</h2>
+</div>
+<div class="grid">
+<div class="card" style="background:#fff;border-top:10px solid #8CC63F"><h3 class="d" style="font-size:22px;margin:0 0 8px">À la française</h3><p style="margin:0">Salade verte, tomates cerises et un peu de vinaigrette, comme sur la boîte.</p></div>
+<div class="card" style="background:#fff;border-top:10px solid #F5A623"><h3 class="d" style="font-size:22px;margin:0 0 8px">Dîner en famille</h3><p style="margin:0">Purée maison ou frites, avec des haricots verts.</p></div>
+<div class="card" style="background:#fff;border-top:10px solid #1B4B9B"><h3 class="d" style="font-size:22px;margin:0 0 8px">En sandwich</h3><p style="margin:0">Coupée en tranches dans un pain frais, avec crudités et sauce au choix.</p></div>
+</div>
+</div>
+</section>
+
+<footer style="background:linear-gradient(90deg,#8E0B20,#C8102E 60%,#E8452C);color:#fff;border-top:6px solid #FFD54A">
+<div class="wrap" style="padding-top:40px;padding-bottom:40px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center">
+<img class="logo" src="./assets/2655cb557b58026e876856b88d121f89.png" alt="Le Gaulois" style="height:68px;width:auto;display:block">
+<p style="margin:0;font-size:15px">Volaille française · Née, élevée, préparée en France<br>[Contact / distributeur à compléter]</p>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":3400}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
